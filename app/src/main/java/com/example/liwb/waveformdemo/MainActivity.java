@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.signalwaveform.waveform.WaveForm;
+import com.example.signalwaveform.waveform.WaveFormEx;
 
 import java.util.Random;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     LinearLayout ll;
     WaveForm waveForm;
+    WaveFormEx waveFormEx;
     Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);//强制横屏
         ll=findViewById(R.id.waveform);
         waveForm=new WaveForm(this);
+//        waveFormEx=new WaveFormEx(this);
+//        waveFormEx.setWorkMode(WaveFormEx.WorkMode_Two);
+//        ll.addView(waveFormEx);
         ll.addView(waveForm);
         button=findViewById(R.id.OK);
 
